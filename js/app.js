@@ -5,13 +5,10 @@ const searchMeals = () => {
     fetch(url)
         .then(res => res.json())
         .then(data => displayMeals(data.meals))
-        .catch(error =>{
+        .catch(error => {
             document.getElementById('not-found').innerText = "Not Found!";
         });
 }
-
-
-// showing meal items from search result
 const displayMeals = meals => {
     const mealsDiv = document.getElementById('meals');
 
